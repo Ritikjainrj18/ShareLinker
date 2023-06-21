@@ -99,7 +99,7 @@ vector<ll> primeFactors(ll n){vector<ll>factors;while(n%2==0){factors.push_back(
 vector<ll> allFactors(ll n)/*unsorted*/{vector<ll> factors;for(int i=1;i<=sqrt(n);i++){if(n%i==0){factors.push_back(i);if(n/i!=i)factors.push_back(n/i);}}return factors;}
 
 long long maxsubarraysum(vl array,long long n){long long best = 0, sum = 0;for (long long  k = 0; k < n; k++) {sum = max(array[k],sum+array[k]);best = max(best,sum);}return  best ;}
-void printBinary(int num){for(int i=10;i>=0;--i){cout<<((num>>i)&1);}cout<<endl;}
+void printBinary(int num){for(int i=25;i>=0;--i){cout<<((num>>i)&1);}cout<<endl;}
 
 template<typename T>
 ll vsum(vector<T> v){ll s=0;for(int i=0;i<v.size();i++)s+=v[i];return s;}
@@ -216,11 +216,11 @@ public:
     }
 };
 /**********************************************************/
-vector<ll> fac(int(2e6+1),0);
+vector<ll> fac(int(1e0+10),0);
 void calfac(ll M){
     fac[0]=1;
     fac[1]=1;
-    for(int i=2;i<2e6;i++){
+    for(int i=2;i<1e6+10;i++){
         fac[i]=i*fac[i-1];
         fac[i]%=M;
     }
@@ -241,19 +241,31 @@ ll NCR(ll a,ll b,ll M){
 /**********************************************************/
 void presolve()
 {
-    calfac(MOD);
+    // manipulated_seive(1e6+10);
+    // calfac(MOD1);
 }
 /**********************************************************/
-
-void solve() 
-{    
+void solve()
+{
     ll n;
     cin>>n;
-    ll ans=n*(n-1);
-    ans%=MOD;
-    ans*=fac[n];
-    ans%=MOD;
-  cout<<ans<<nl;
+    if(n==2){
+      cout<<-1<<nl;
+      return;
+    }
+    string t(n,'1');
+    vector<string> s(n,t);
+    
+    for(int i=0;i<n;i++){
+        for(int j=0;j<i;j++){
+            s[i][j]='0';
+        }
+    }
+    s[n-1][n-1]='0';
+    s[0][n-1]='0';
+      for(auto i:s){
+        cout<<i<<nl;
+    }
 }
 int main()  
 {
@@ -265,14 +277,15 @@ int main()
     #endif
     auto start1 = high_resolution_clock::now();
     int tc=1;
-    cin>>tc;    
     presolve();
+    cin>>tc;    
     for(int i=1;i<=tc;i++)
     { 
         // cout << "Case    #" << i << ": ";
+
+
         solve();
     }   
-    
     auto stop1 = high_resolution_clock::now();
     auto duration = duration_cast<microseconds>(stop1 - start1);
     #ifndef ONLINE_JUDGE
