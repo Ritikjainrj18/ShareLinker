@@ -45,9 +45,13 @@ export const downloadImage = async (request, response) => {
 };
 
 export const mailHandler = async (request, response) => {
-  const message=`${request.body.sender} has sent you a Link to download a file \n\n ${request.body.url}`
+  let password=`Not required`;
+  if(request.body.password){
+    password=request.body.password
+  }
+  const message=`${request.body.sender} has sent you a Link to download a file \n\n Link : ${request.body.url} \n 
+                 Password : ${password}`
   console.log(message)
-  // return response.status(200).json({message:message})
   try {
     await sendEmail({
       email:request.body.receiver,

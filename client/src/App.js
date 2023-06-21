@@ -14,7 +14,7 @@ function App() {
     e.preventDefault();
     let response = await uploadFile(data);
     setResult(response.path);
-    navigate('/download',{state:{url:response.path}})
+    navigate('/download',{state:{url:response.path,password}})
   };
   const logo =
     "https://cdnblog.filecloud.com/blog/wp-content/uploads/2018/06/filesharing.png";

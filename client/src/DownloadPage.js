@@ -7,17 +7,18 @@ function DownloadPage() {
   const navigate = useNavigate();
   const [sender, setSender] = useState("");
   const [receiver, setReceiver] = useState("");
+  const location = useLocation();
   const Submit = async (e) => {
     e.preventDefault();
     const data = new URLSearchParams();
     data.append("sender", sender);
     data.append("receiver", receiver);
     data.append("url", result);
+    data.append("password",location.state.password);
     await sendEmail(data);
     navigate("/");
   };
 
-  const location = useLocation();
   const result = location.state.url;
 
   return (
