@@ -1,0 +1,276 @@
+%-------------------------
+% Resume in Latex
+% Author : Jake Gutierrez
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\setlength{\multicolsep}{-3.0pt}
+\setlength{\columnsep}{-1pt}
+\input{glyphtounicode}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\newcommand{\itemmarker}{{\small\textbullet}}
+\setlist[itemize]{label=\itemmarker}
+\renewcommand{\itemmarker}{{\small\textbullet}}
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.7in}
+\addtolength{\evensidemargin}{-0.8in}
+\addtolength{\textwidth}{1.19in}
+\addtolength{\topmargin}{-.7in}
+\addtolength{\textheight}{1.4in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large\bfseries
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\classesList}[4]{
+    \item\small{
+        {#1 #2 #3 #4 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textbf{\small #2} \\
+      #3 &  #4 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & \small #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{1.001\textwidth}{l@{\extracolsep{\fill}}r}
+      #1 & \textbf{\small #2}\\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING----------
+% \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+%   \textbf{\href{http://sourabhbajaj.com/}{\Large Sourabh Bajaj}} & Email : \href{mailto:sourabh@sourabhbajaj.com}{sourabh@sourabhbajaj.com}\\
+%   \href{http://sourabhbajaj.com/}{http://www.sourabhbajaj.com} & Mobile : +1-123-456-7890 \\
+% \end{tabular*}
+
+\begin{center}
+    {\Huge \scshape Ritik Kumar Jain} \\ \vspace{10pt}
+    \small \raisebox{-0.1\height}\faPhone\ +91 6232547429 ~ \href{mailto:ritikjainrj18@gmail.com}{\raisebox{-0.2\height}\faEnvelope\  {ritikjainrj18@gmail.com}} ~ 
+    \href{https://www.linkedin.com/in/ritik-jain-4219a9214/}{\raisebox{-0.2\height}\faLinkedin\ {linkedin.com/in/ritik-jain}}  ~
+    \href{https://github.com/Ritikjainrj18}{\raisebox{-0.2\height}\faGithub\ {github.com/Ritikjainrj18}}
+    \vspace{-1pt}
+\end{center}
+
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Institute of Engineering \& Technology DAVV, Indore}{Nov. 2020 -- May 2024}
+      {Bachelor of Technology in Computer Science}{\textbf{CGPA : 8.6}}
+      % \begin{itemize}
+      %    \item \textbf{Relevant Coursework}\textbf{ :} Object-Oriented Programming , Operating Systems, Web Technologies, Software engineering, Data Structures \& Algorithms (C/C++).
+      % \end{itemize}
+  \resumeSubHeadingListEnd
+
+
+% %------RELEVANT COURSEWORK-------
+% \section{Relevant Coursework}
+%     %\resumeSubHeadingListStart
+%         \begin{multicols}{4}
+%             \begin{itemize}[itemsep=-5pt, parsep=3pt]
+%                 \item\small Data Structures
+%                 \item Software Methodology
+%                 \item Algorithms Analysis
+%                 \item Database Management
+%                 \item Artificial Intelligence
+%                 \item Internet Technology
+%                 \item Systems Programming
+%                 \item Computer Architecture
+%             \end{itemize}
+%         \end{multicols}
+%         \vspace*{2.0\multicolsep}
+%     %\resumeSubHeadingListEnd
+
+
+%-----------PROGRAMMING SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Programming Languages}{: C++ , Javascript} \\
+     \textbf{Front-End Technologies}{: React.Js, HTML5, CSS3} \\
+     \textbf{Back-End Technologies \& Databases}{: Node.js, Express, MongoDB, SQL, Restful APIs} \\
+    }}
+    
+ \end{itemize}
+ \vspace{-16pt}
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+\vspace{2pt}
+  \resumeSubHeadingListStart
+    % \resumeSubheading
+    %   {Technical Content Writing Intern - Geeks for Geeks}{Mar 2022 -- Aug 2022}
+    %   {}{}
+    %   \vspace{-16pt}
+    %   \resumeItemListStart
+    %   \resumeItem{Researched \& wrote \textbf{15+} tutorials on technologies like Next Js, Express, MongoDB, and SQL. \color{blue}\href{https://auth.geeksforgeeks.org/user/ksangtiani13/articles}{(tutorials)} }
+        
+    %   \resumeItemListEnd
+
+    \resumeSubheading
+      {Backend Developer - Arch Labs}{Aug 2022 -- Sep 2022}
+      {}{}
+        \vspace{-16pt}
+      \resumeItemListStart
+        \resumeItem{Worked with \textbf{React Js}, \textbf{Express} \& \textbf{MongoDB} to build a SIP calculator which calculates user's expected profit based on investment traits. }
+        \resumeItem{Actively participated in daily meetings \& collaborated with the team using \textbf{Git} version control.}
+      
+    \resumeItemListEnd
+    
+  \resumeSubHeadingListEnd
+\vspace{-12pt}
+
+%-----------PROJECTS-----------
+\section{Technical Projects}
+    % \vspace{-5pt}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+          {\textbf{Pathfinding Visualizer - }  \color{blue}\href{https://github.com/Ritikjainrj18/PathFinding-Visualizer}{Github}  $|$ \color{blue}\href{https://pathfinding-visualizer-9sg.pages.dev/}{Project} \color{black}      }{\emph{React Js}}
+          \resumeItemListStart
+          \resumeItem{Developed a portal to facilitate resource sharing among Institutes to increase the standards of Research, Product Development \& overall Education.}
+          \resumeItem{Used \textbf{React Js }to implement frontend with \textbf{Redux} for global state management.}
+          \resumeItem{Implemented Smart Agreements to ensure fair sharing of resources using \textbf{Blockchain} in \textbf{Hardhat} environment \& integrated it to the frontend using \textbf{Moralis}.}
+          \resumeItem{Projected to reduce the gov. institute's grants by more than\textbf{ 45 crores}.}
+          \resumeItemListEnd
+          \vspace{-13pt}
+      \resumeProjectHeading
+          {\textbf{FlavorFinder - }   \color{blue}\href{https://github.com/Ritikjainrj18/FlavorFinder}
+          {Github}  $|$ \color{blue}\href{https://glittering-lokum-f95301.netlify.app/}{Project} \color{black}  $|$  }{\emph{React Js, Node Js, Express Js, MongoDB}}
+          \resumeItemListStart
+            \resumeItem{Developed an eCommerce store that uses \textbf{blockchain-based }\textbf{NFT Warranty (ERC721 Token)}}
+            \resumeItem{Implemented frontend using \textbf{Next Js} \& a hybrid backend using \textbf{Express}, \textbf{Solidity} \& \textbf{Hardhat}.}
+            \resumeItem{Built a panel for the sellers to manage orders and complete e-commerce functionality for customers to place \& track orders.}
+          \resumeItemListEnd 
+          % \vspace{-13pt}
+          % \resumeProjectHeading
+          % {\textbf{Connect The Docs - }  \color{blue}\href{https://github.com/kunals131/Doctor-Appointment}{Github}  \color{black}    $|$  \emph{NextJs, Flask, Scikit-learn, NodeJs, Express,  MySQL, Socket.IO, Sequelize ORM}}{}
+          % \resumeItemListStart
+          %   \resumeItem{Built a web application to connect patients \& doctors  including features such as AI Diagnosis, Doctor Recommendation, and text messaging.}
+          %   \resumeItem{Used \textbf{socket.IO} to implement text-messaging \& notifications.}
+          %   \resumeItem{Implemented \textbf{AI diagnosis} which predicts diseases based on symptoms \& recommends best doctors.}
+          % \resumeItemListEnd 
+          % \vspace{-13pt}
+%           \resumeProjectHeading
+%           {\textbf{React Room - } \color{blue}\href{https://github.com/kunals131/React-Room}{Github} $|$ \color{blue}\href{https://reactroom.netlify.app}{Project} \color{black}    $|$  \emph{React, Redux/Thunk, Dolby.io APIs, Firebase, Material UI}}{}
+%           \resumeItemListStart
+%             \resumeItem{Developed an Audio/Video conferencing web application using \textbf{Dolby's Voxeet SDK} with \textbf{Firebase}'s real-time database.}
+%             \resumeItem{Implemented Smart Voice Assistance using \textbf{Web Speech APIs} .}
+%           \resumeItemListEnd 
+%     \resumeSubHeadingListEnd
+% \vspace{-12pt}
+
+
+%
+
+
+
+
+
+
+
+%-----------Competitive Programming---------
+\section{Coding Profiles}
+\vspace{3pt}
+\textbullet \large ~ { CodeForces} :\textbf{ Specialist} with maximum rating of 1554  
+  [ Handle : {\color{blue}\href{https://codeforces.com/profile/ritikjainrj18}{ritikjainrj18}
+  }]\color{black} \\ \vspace{3pt}
+\textbullet \large ~ { CodeChef }   :\textbf { 5 Star} with maximum rating of 2032 [ Handle : {\color{blue}\href{https://www.codechef.com/users/ritikjain18}{ritikjain18}} ]\color{black} \\  \vspace{3pt}
+\textbullet \large ~ { LeetCode } :\textbf { Knight} with maximum rating of 1952 [ Handle : {\color{blue}\href{https://leetcode.com/ritikjainrj18/}{ritikjainrj18}} ]\color{black} \\
+ \vspace{3pt}
+
+%-----------INVOLVEMENT---------------
+\section{Achievements}
+\vspace{3pt}
+\textbullet \large ~ { Secured}  \textbf{Global rank 10 } out of 1500+ contestants in CodeChef Starters 75 Division 2 \color{black} \\ \vspace{3pt}
+\textbullet \large ~ { Secured}  \textbf{Global rank 518 } out of 8000+ contestants in Codeforces Round 834 \color{black} \\ \vspace{3pt}
+\textbullet \large ~ { Secured}  \textbf{Global rank 321 } out of 21K+ contestants in LeetCode Weekly Contest 330   \color{black} \\ \vspace{3pt}
+\textbullet \large ~ { Secured}  \textbf{Rank 5} (overall) and \textbf{Rank 1} (Junior division) in college coding contest {\color{blue}\href{https://drive.google.com/file/d/1uUL-tdugopEKJdbyMfIwTf4pnrAo_BMW/view} {(Link)} \color{black} \\ \vspace{3pt}
+ \textbullet \large ~ { Secured}  \textbf{Global rank 421 } out of 5000 teams in in ICPC India 2021 Preliminary Online Round\color{black} \\ \vspace{3pt}
+ \textbullet \large ~ { Secured}  \textbf{Global rank 1422 } in Google Kickstart Round B 2022\color{black} \\ \vspace{3pt}
+ \textbullet \large ~ { Solved}  \textbf{1000+} DSA problems across several platforms\color{black} \\ \vspace{3pt}
+
+
+
+\end{document}

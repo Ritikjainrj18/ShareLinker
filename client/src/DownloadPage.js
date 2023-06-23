@@ -3,6 +3,8 @@ import { useLocation, useNavigate } from "react-router-dom";
 import { sendEmail } from "./services/api";
 import "./App.css";
 
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 function DownloadPage() {
   const navigate = useNavigate();
   const [sender, setSender] = useState("");
@@ -10,19 +12,26 @@ function DownloadPage() {
   const location = useLocation();
   const Submit = async (e) => {
     e.preventDefault();
+    toast("Sending Mail")
     const data = new URLSearchParams();
     data.append("sender", sender);
     data.append("receiver", receiver);
     data.append("url", result);
     data.append("password",location.state.password);
-    await sendEmail(data);
-    navigate("/");
+    const response=await sendEmail(data);
+    if(response.error!=undefined){
+      toast("Mail not sent");
+    }else{
+      // navigate("/");
+      toast("Mail Sent")
+    }
   };
 
   const result = location.state.url;
-
+   
   return (
     <div>
+
       <div className="center">
       Share the Link : 
       <a href={result} target="_blank">
@@ -32,8 +41,8 @@ function DownloadPage() {
       </div>
 
       <h1>OR</h1>
-      <div className="form">
       <h3>Send Mail</h3>
+      <div className="form">
       <form
         onSubmit={(e) => {
           Submit(e);
@@ -56,8 +65,12 @@ function DownloadPage() {
         />
         <br />
         <input type="submit" value="Send Mail" />
+        <ToastContainer />
+
       </form>
       </div>
+
+      
 
     </div>
   );
