@@ -33,8 +33,8 @@ function DownloadPage() {
     <div>
 
       <div className="center">
-      Share the Link : 
-      <a href={result} target="_blank">
+      Share the Link :-
+      <a className="link" href={result} target="_blank">
         {result}
       </a>
       <br />

@@ -52,19 +52,17 @@ const data = new FormData();
             value={password}
             onChange={(e) => setPassword(e.target.value)}  
           />
-          <br /><br />
           <input
             type="file"
             ref={fileInputRef}
             required
             onChange={(e) => setfile(e.target.files[0])}
           />
-          <br /><br />
           <input type="submit" value="Share" />
         </form>
 
       </div>
-      </div>
+     </div>
     </div>
   );
 }
