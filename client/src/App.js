@@ -2,7 +2,12 @@ import { useEffect, useRef, useState } from "react";
 import "./App.css";
 import {useNavigate} from 'react-router-dom'
 import { uploadFile } from "./services/api";
+import ProgressBar from "@ramonak/react-progress-bar";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 function App() {
+  const [ uploaded, setUploaded]=useState(null);
   const navigate = useNavigate();
   const [file, setfile] = useState("");
   const [password, setPassword] = useState("");
@@ -12,7 +17,8 @@ function App() {
 
   const Submit = async (e) => {
     e.preventDefault();
-    let response = await uploadFile(data);
+    toast("Uploading");
+    let response = await uploadFile(data,setUploaded);
     setResult(response.path);
     navigate('/download',{state:{url:response.path,password}})
   };
@@ -58,7 +64,11 @@ const data = new FormData();
             required
             onChange={(e) => setfile(e.target.files[0])}
           />
+          {console.log(uploaded)}
+          {uploaded&&<ProgressBar className="progress" completed={uploaded}/>}
           <input type="submit" value="Share" />
+          <ToastContainer />
+
         </form>
 
       </div>
